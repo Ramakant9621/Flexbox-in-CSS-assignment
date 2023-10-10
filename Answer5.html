@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="answer5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <title>Assignment 9 || Answer 5</title>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #e7e7e7;
+}
+.wrapper{
+    background-color: #fff;
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+.irctc-page{
+    width: 40vw;
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    color: #333333;
+}
+.image-container img{
+    margin-top: 10px;
+    padding: auto;
+    height: 50%; 
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu{
+    text-align: end;
+}
+.tab1 button{
+    border: none;
+    background-color: #fff;
+    margin: 7px;
+    cursor: pointer;
+}
+.tab2 button{
+    border: 1px solid gray;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.tab1 button:hover{
+    text-decoration: underline;
+}
+.tab2 button:hover{
+    background-color: #FB792B;
+    color: #fff;
+}
+
+.header{
+    margin: 40px 0px;
+    padding: 20px 0px;
+    font-size: 24px;
+}
+.header h1{
+    font-size: 1.5em;
+    padding-bottom: 0.2em;
+}
+.header p span{
+    font-size: 1em;
+}
+.one{
+    color: #01BB0A;
+}
+.two{
+    color: #FB792B;
+    padding: 1em;
+}
+.three{
+    color: #213D77;
+}
+
+.booking-details{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.booking-details button{
+    display: flex;
+    padding: 0px 15px;
+    text-align: center;
+    border-radius: 7px;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+.booking-details button:hover{
+    background-color: #184296e5;
+    color: #ffffff;
+}
+.booking-details img{
+    padding: 5px;
+}
+#book-btn{
+    background-color: #213D77;
+    color: #ffffff;
+}
+#book-btn:hover{
+    background-color: #184296e5;
+    color: #ffffff;
+}
+
+.station-details{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.interchange-btn-container button{
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.from-to-card{
+    display: flex;
+    align-items: center;
+}
+
+.from-to-card img{
+    padding: 10px 20px;
+}
+.from-to-card span{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.from-to-card p{
+    font-size: 1em;
+}
+.from-to-card select{
+    font-size: 1.2em;
+    padding: 4px 8px;
+    border: none;
+}
+
+.search-btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-btn{
+    width: 100%;
+    color: #ffffff;
+    background-color: #01BB0A;
+    margin: 30px auto;
+    font-size: 2em;
+    padding: 16px ;
+   cursor: pointer;
+   border-radius: 10px;
+   font-weight: 700;
+   border: none;
+}
+.search-btn:hover{
+    background-color: #009307;
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="irctc-page">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="background.jpeg" alt="IRCTC" />
+                    <img src="irctc.png" alt="IRCTC Logo" />
+                </div>
+                <div class="menu">
+                    <div class="tab1">
+                        <button>Ask Disha</button>
+                        <button>Contact us</button>
+                        <button>Alerts</button>
+                    </div>
+                    <div class="tab2">
+                        <button>Login</button>
+                        <button>Register</button>
+                        <button>Agent Login</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header">
+                <h1>Indian Railways</h1>
+                <p>
+                    <span class="one">Safety</span>
+                    <span class="two">Security</span>
+                    <span class="three">Punctuality</span>
+                </p>
+            </div>
+
+            <div class="booking-details">
+                <button id="book-btn"><img src="" alt="ticket">BOOK Ticket</button>
+                <button><img src="" alt="ticket">PNR Status</button>
+                <button><img src="assets/chart.png" alt="ticket">Charts / Vacancy</button>
+            </div>
+
+            <div class="station-details">
+
+                <div class="from-to-card">
+                    <img src="assets/fromTrain.png" alt="">
+                    <div class="from-station-details">
+                        <select name="fromStation" id="fromStation" disabled>
+                            <option value="from">from</option>
+                        </select>
+                        <div class="info station">
+                            <span>Bangalore</span>
+                            <p>KSR-Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interchange-btn-container">
+                    <button><img src="assets/interchange.png" alt="change button"></button>
+                </div>
+
+                <div class="from-to-card">
+                    <img src="assets/toTrain.png" alt="">
+                    <div class="to-station-details">
+                        <select name="toStation" id="toStation" disabled>
+                            <option value="to">to</option>
+                        </select>
+                        <div class="info station">
+                            <span>PRYJ-Prayagraj</span>
+                            <p>CNB-kanpur Central</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="station-details">
+                <div class="from-to-card">
+                    <img src="" alt="date">
+                    <div class="date-details">
+                        <select name="date" id="date" disabled>
+                            <option value="date">Date</option>
+                        </select>
+                        <div class="info">
+                            <span>15 Aug 23</span>
+                            <p>Sunday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="from-to-card">
+                    <img src="assets/class.png" alt="class">
+                    <div class="class-details">
+                        <select name="class" id="class" disabled>
+                            <option value="class">Class</option>
+                        </select>
+                        <div class="info">
+                            <span>3A</span>
+                            <p>AC 3 Tier</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="from-to-card">
+                    <img src="assets/seat.png" alt="seat">
+                    <div class="seat-details">
+                        <select name="seat" id="seat" disabled>
+                            <option value="seat">Seat</option>
+                        </select>
+                        <div class="info">
+                            <span>TATKAL</span>
+                            <p>AC 3 Tier</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-btn-container">
+                <button class="search-btn" type="submit">Search Train <img src="assets/arrowGo.png" alt=""></button>
+            </div>
+
+        </div>
+        <div class="image-container">
+            <img src="background.jpeg" alt="Train">
+        </div>
+    </div>
+</body>
+
+</html>
